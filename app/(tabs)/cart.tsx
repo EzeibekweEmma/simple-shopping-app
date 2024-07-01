@@ -1,7 +1,16 @@
-import { View, Text, Image, Pressable, FlatList } from 'react-native';
-import React from 'react';
+import {
+  View,
+  Text,
+  Image,
+  Pressable,
+  FlatList,
+  Modal,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
+import React, { useState } from 'react';
 import Wrapper from '@/components/Wrapper';
-import { AntDesign, MaterialIcons } from '@expo/vector-icons';
+import { AntDesign, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import productData from '@/components/productData.json';
 
 type productDataT = {
@@ -13,6 +22,7 @@ type productDataT = {
 };
 
 export default function Cart() {
+  const [isCheckOut, setIsCheckOut] = useState(false);
   let total = 0;
   productData.map((item) => (item.isCart ? (total += item.price) : null));
 
@@ -28,7 +38,7 @@ export default function Cart() {
         <Text className="text-white text-2xl mb-0.5" numberOfLines={1}>
           {item.name}
         </Text>
-        <View className="flex-row mb-2">
+        <View className="flex-row mb-2 items-center">
           <MaterialIcons name="attach-money" size={18} color="#fff" />
           <Text className="text-white text-lg">{item.price}</Text>
         </View>
@@ -48,9 +58,29 @@ export default function Cart() {
         ListFooterComponent={<Text className="mb-28" />}
         renderItem={({ item }) => <Card item={item} />}
       />
-      <Pressable className="absolute right-5 bottom-20 bg-red-500 items-center justify-center py-1.5 px-3 rounded-full">
+      <TouchableOpacity
+        className="absolute right-5 bottom-20 bg-red-500 items-center justify-center py-1.5 px-3 rounded-full"
+        onPress={() => setIsCheckOut(true)}
+      >
         <Text className="text-white text-xl">CheckOut ${total}</Text>
-      </Pressable>
+      </TouchableOpacity>
+      <Modal
+        visible={isCheckOut}
+        onRequestClose={() => setIsCheckOut(false)}
+        animationType="slide"
+        presentationStyle="formSheet"
+      >
+        <View className="h-full justify-center items-center">
+          <AntDesign name="checkcircleo" size={200} color="#22c55e" />
+          <Text className="text-5xl text-green-500">Successful</Text>
+          <Pressable
+            className="absolute top-5 right-5"
+            onPress={() => setIsCheckOut(false)}
+          >
+            <FontAwesome name="times" size={40} color="black" />
+          </Pressable>
+        </View>
+      </Modal>
     </Wrapper>
   );
 }

@@ -36,7 +36,7 @@ export default function Products() {
             } flex-row items-center justify-center space-x-1 py-1 px-2 rounded-md`}
           >
             <AntDesign name="shoppingcart" size={16} color={'#fff'} />
-            <Text className="text-white text-lg">
+            <Text className="text-white">
               {item.isCart ? 'Remove' : 'Add to cart'}
             </Text>
           </Pressable>
