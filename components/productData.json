@@ -46,7 +46,7 @@
     "name": "Sony Smart Watch",
     "price": 189.9,
     "image": "https://i.ibb.co/sQmZc0x/watch-5.webp",
-    "isCart": false
+    "isCart": true
   },
   {
     "id": 2025454,
