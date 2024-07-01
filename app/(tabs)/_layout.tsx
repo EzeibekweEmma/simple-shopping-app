@@ -8,13 +8,19 @@ const _layout = () => {
       <Tabs.Screen
         name="home"
         options={{
-          title: 'Home',
+          title: 'Products',
+          headerStyle: { backgroundColor: '#000' },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
         }}
       />
       <Tabs.Screen
         name="cart"
         options={{
           title: 'Cart',
+          headerStyle: { backgroundColor: '#000' },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
         }}
       />
     </Tabs>
