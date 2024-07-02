@@ -24,7 +24,7 @@ function TabBar({ state, descriptors, navigation }: TabBarProps) {
   };
 
   return (
-    <View className="flex-row py-2 absolute bottom-0 mx-10 mb-1 rounded-full bg-red-300/20">
+    <View className="flex-row py-2 absolute bottom-0 mx-10 mb-1 rounded-full bg-[#4c3b3bf5]">
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =

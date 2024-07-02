@@ -5,13 +5,12 @@ import {
   Pressable,
   FlatList,
   Modal,
-  Button,
   TouchableOpacity,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Wrapper from '@/components/Wrapper';
 import { AntDesign, FontAwesome, MaterialIcons } from '@expo/vector-icons';
-import productData from '@/components/productData.json';
+import CartContext from '@/components/productContext';
 
 type productDataT = {
   id: number;
@@ -23,15 +22,17 @@ type productDataT = {
 
 export default function Cart() {
   const [isCheckOut, setIsCheckOut] = useState(false);
-  let total = 0;
-  productData.map((item) => (item.isCart ? (total += item.price) : null));
+  const { cart, removeFromCart } = useContext(CartContext);
+
+  const total = cart.reduce(
+    (acc: number, item: { price: any }) => acc + item.price,
+    0
+  );
 
   const Card = ({ item }: { item: productDataT }) => (
     <View className="rounded-3xl flex-row overflow-hidden w-full bg-slate-600/30 items-end justify-center">
       <Image
-        source={{
-          uri: item.image,
-        }}
+        source={{ uri: item.image }}
         className="flex-[0.4] h-48 object-center object-cover"
       />
       <View className="mb-2 flex-[0.5]">
@@ -42,17 +43,21 @@ export default function Cart() {
           <MaterialIcons name="attach-money" size={18} color="#fff" />
           <Text className="text-white text-lg">{item.price}</Text>
         </View>
-        <Pressable className="bg-red-500 flex-row items-center justify-center space-x-1 py-1 px-2 rounded-md">
+        <Pressable
+          onPress={() => removeFromCart(item.id)}
+          className="bg-red-500 flex-row items-center justify-center space-x-1 py-1 px-2 rounded-md"
+        >
           <AntDesign name="shoppingcart" size={16} color={'#fff'} />
           <Text className="text-white text-lg">Remove from cart</Text>
         </Pressable>
       </View>
     </View>
   );
+
   return (
     <Wrapper>
       <FlatList
-        data={productData}
+        data={cart}
         keyExtractor={(item) => item.id.toString()}
         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
         ListFooterComponent={<Text className="mb-28" />}
@@ -62,7 +67,7 @@ export default function Cart() {
         className="absolute right-5 bottom-20 bg-red-500 items-center justify-center py-1.5 px-3 rounded-full"
         onPress={() => setIsCheckOut(true)}
       >
-        <Text className="text-white text-xl">CheckOut ${total}</Text>
+        <Text className="text-white text-xl">CheckOut ${total.toFixed(2)}</Text>
       </TouchableOpacity>
       <Modal
         visible={isCheckOut}
