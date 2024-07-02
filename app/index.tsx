@@ -1,4 +1,4 @@
-import { View, Text, Image, ActivityIndicator, Pressable } from 'react-native';
+import { View, Text, Image, Pressable } from 'react-native';
 import React from 'react';
 import Animated, { FadeInDown, FadeInLeft } from 'react-native-reanimated';
 import { useRouter } from 'expo-router';
