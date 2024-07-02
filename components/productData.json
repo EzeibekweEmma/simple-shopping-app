@@ -3,140 +3,120 @@
     "id": 1020155,
     "name": "Headphones Wireless",
     "price": 103.2,
-    "image": "https://i.ibb.co/zS3k6QB/headphone-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/zS3k6QB/headphone-1.webp"
   },
   {
     "id": 805455,
     "name": "Sony Lady Fitness Watch",
     "price": 169,
-    "image": "https://i.ibb.co/w4K4TY2/watch-9.webp",
-    "isCart": true
+    "image": "https://i.ibb.co/w4K4TY2/watch-9.webp"
   },
   {
     "id": 1805455,
     "name": "Tea Tree Lemon For Fine Hair",
     "price": 55,
-    "image": "https://i.ibb.co/998PPnW/cosmetics-4.webp",
-    "isCart": true
+    "image": "https://i.ibb.co/998PPnW/cosmetics-4.webp"
   },
   {
     "id": 405455,
     "name": "Galaxy Android Tablet",
     "price": 340,
-    "image": "https://i.ibb.co/RpnnGmx/mobile-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/RpnnGmx/mobile-1.webp"
   },
   {
     "id": 1105455,
     "name": "Lenovo Sports Bluetooth",
     "price": 49,
-    "image": "https://i.ibb.co/YNLw2QM/blutooth-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/YNLw2QM/blutooth-1.webp"
   },
   {
     "id": 1905455,
     "name": "Innisfree Face Wash",
     "price": 99.9,
-    "image": "https://i.ibb.co/9n6f275/cream-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/9n6f275/cream-1.webp"
   },
   {
     "id": 705455,
     "name": "Sony Smart Watch",
     "price": 189.9,
-    "image": "https://i.ibb.co/sQmZc0x/watch-5.webp",
-    "isCart": true
+    "image": "https://i.ibb.co/sQmZc0x/watch-5.webp"
   },
   {
     "id": 2025454,
     "name": "Gaming Headphone",
     "price": 270,
-    "image": "https://i.ibb.co/M6nVQ2v/headphone-5.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/M6nVQ2v/headphone-5.webp"
   },
   {
     "id": 1005455,
     "name": "Lenovo Wireless Bluetooth",
     "price": 79.9,
-    "image": "https://i.ibb.co/0XPd7D4/blutooth-4.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/0XPd7D4/blutooth-4.webp"
   },
   {
     "id": 505455,
     "name": "iPhone 14 Pro",
     "price": 1350,
-    "image": "https://i.ibb.co/gmdpWtD/mobile-5.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/gmdpWtD/mobile-5.webp"
   },
   {
     "id": 1205455,
     "name": "DeepCool Air Cooler",
     "price": 110,
-    "image": "https://i.ibb.co/2d2qBRb/cpu-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/2d2qBRb/cpu-1.webp"
   },
   {
     "id": 1305455,
     "name": "Antec Air Cooler",
     "price": 170,
-    "image": "https://i.ibb.co/yqndcgs/cpu-5.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/yqndcgs/cpu-5.webp"
   },
   {
     "id": 1405455,
     "name": "Nike Retro GTS-2",
     "price": 399.9,
-    "image": "https://i.ibb.co/WFWKQWZ/shoes-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/WFWKQWZ/shoes-1.webp"
   },
   {
     "id": 1505455,
     "name": "INIKA Mineral Sunkissed",
     "price": 80,
-    "image": "https://i.ibb.co/PGRX8wM/powder-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/PGRX8wM/powder-1.webp"
   },
   {
     "id": 1605455,
     "name": "Brand Cosmetic Product",
     "price": 120,
-    "image": "https://i.ibb.co/qkspnNy/cosmetics-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/qkspnNy/cosmetics-1.webp"
   },
   {
     "id": 1705455,
     "name": "Fortuna Bangle Three-row",
     "price": 499,
-    "image": "https://i.ibb.co/ThVqy07/bracelet-4.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/ThVqy07/bracelet-4.webp"
   },
   {
     "id": 605455,
     "name": "Apple iPad Air",
     "price": 949.9,
-    "image": "https://i.ibb.co/G9ttXCM/ipad-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/G9ttXCM/ipad-1.webp"
   },
   {
     "id": 905455,
     "name": "Apple Watch Sport Band",
     "price": 399.9,
-    "image": "https://i.ibb.co/xqQtGPr/watch-1.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/xqQtGPr/watch-1.webp"
   },
   {
     "id": 2005455,
     "name": "Fortuna Creole Hoop",
     "price": 380,
-    "image": "https://i.ibb.co/wNsPjhC/earring-8.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/wNsPjhC/earring-8.webp"
   },
   {
     "id": 305455,
     "name": "Headphone with Mic",
     "price": 360,
-    "image": "https://i.ibb.co/xDqmwGW/headphone-8.webp",
-    "isCart": false
+    "image": "https://i.ibb.co/xDqmwGW/headphone-8.webp"
   }
 ]

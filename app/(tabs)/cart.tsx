@@ -17,7 +17,6 @@ type productDataT = {
   name: string;
   price: number;
   image: string;
-  isCart: boolean;
 };
 
 export default function Cart() {
@@ -59,12 +58,20 @@ export default function Cart() {
       <FlatList
         data={cart}
         keyExtractor={(item) => item.id.toString()}
+        ListEmptyComponent={
+          <View className="h-full items-center justify-center">
+            <Text className="text-3xl text-white">No items found</Text>
+          </View>
+        }
         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
         ListFooterComponent={<Text className="mb-28" />}
         renderItem={({ item }) => <Card item={item} />}
       />
       <TouchableOpacity
-        className="absolute right-5 bottom-20 bg-red-500 items-center justify-center py-1.5 px-3 rounded-full"
+        disabled={cart.length === 0}
+        className={`${
+          cart.length === 0 ? 'bg-red-200/40' : 'bg-red-500'
+        } absolute right-5 bottom-20 items-center justify-center py-1.5 px-3 rounded-full`}
         onPress={() => setIsCheckOut(true)}
       >
         <Text className="text-white text-xl">CheckOut ${total.toFixed(2)}</Text>

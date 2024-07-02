@@ -10,7 +10,6 @@ type productDataT = {
   name: string;
   price: number;
   image: string;
-  isCart: boolean;
 };
 
 export default function Products() {
@@ -72,6 +71,11 @@ export default function Products() {
         data={productData}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
+        ListEmptyComponent={
+          <View className="h-full items-center justify-center">
+            <Text className="text-3xl text-white">No items found</Text>
+          </View>
+        }
         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
         ListFooterComponent={<Text className="mb-12" />}
         renderItem={({ item }) => <Card item={item} />}
